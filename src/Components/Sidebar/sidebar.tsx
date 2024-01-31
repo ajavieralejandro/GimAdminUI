@@ -1,64 +1,69 @@
-const Sidebar = () =>{
+import React, { ReactNode } from "react";
+interface Props {
+    children?: ReactNode
+    // any props that come into the component
+}
+const Sidebar = ({ children, ...props }: Props) =>{
     return(
         <>
 <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
 
 <div className="min-h-screen flex flex-row bg-gray-100">
-  <div className="flex flex-col w-56 bg-blue-300  overflow-hidden">
+  <div className="flex flex-col w-56 bg-sky-500  overflow-hidden">
    
-    <ul className="flex flex-col py-4">
+    <ul className="flex flex-col py-4 text-white">
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-home"></i></span>
-          <span className="text-sm font-medium">Dashboard</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-home"></i></span>
+          <p className="text-sm font-medium text-white">Clientes</p>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-music"></i></span>
-          <span className="text-sm font-medium">Music</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-music"></i></span>
+          <span className="text-sm font-medium text-white">Music</span>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-drink"></i></span>
-          <span className="text-sm font-medium">Drink</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-drink"></i></span>
+          <span className="text-sm font-medium text-white">Drink</span>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-shopping-bag"></i></span>
-          <span className="text-sm font-medium">Shopping</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-shopping-bag"></i></span>
+          <span className="text-sm font-medium text-white">Shopping</span>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-chat"></i></span>
-          <span className="text-sm font-medium">Chat</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-chat"></i></span>
+          <span className="text-sm font-medium text-white">Chat</span>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-user"></i></span>
-          <span className="text-sm font-medium">Profile</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-user"></i></span>
+          <span className="text-sm font-medium text-white">Profile</span>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-bell"></i></span>
-          <span className="text-sm font-medium">Notifications</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-bell"></i></span>
+          <span className="text-sm font-medium text-white">Notifications</span>
           <span className="ml-auto mr-6 text-sm bg-red-100 rounded-full px-3 py-px text-red-500">5</span>
         </a>
       </li>
       <li>
         <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-black"><i className="bx bx-log-out"></i></span>
-          <span className="text-sm font-medium">Logout</span>
+          <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-white"><i className="bx bx-log-out"></i></span>
+          <span className="text-sm font-medium text-white">Logout</span>
         </a>
       </li>
     </ul>
   </div>
-
+        {children}
 </div>
         </>
     )
