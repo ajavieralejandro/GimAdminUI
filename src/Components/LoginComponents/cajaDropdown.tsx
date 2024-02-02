@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function BasicSelect() {
+export default function CajaDropdown() {
   const [age, setAge] = React.useState('');
 
   const handleChange = (event:any) => {
@@ -13,7 +13,8 @@ export default function BasicSelect() {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <div className='bg-white'>
+    <Box  sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Caja</InputLabel>
         <Select
@@ -31,5 +32,6 @@ export default function BasicSelect() {
         </Select>
       </FormControl>
     </Box>
+    </div>
   );
 }
