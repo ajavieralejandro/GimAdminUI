@@ -2,7 +2,7 @@ import Pagination from "../../Pagination/pagination";
 const ConcepTable = () =>{
     return(
         <>
-     <div className="container p-2 mx-auto sm:p-4 text-black">
+     <div className="container p-2 mx-auto sm:p-4 text-white">
 	<div className="overflow-x-auto">
 		<table className="w-full p-6 text-xs text-left whitespace-nowrap">
 			<colgroup>
